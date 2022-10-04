@@ -1,0 +1,4 @@
+Environment Keys / Variables
+- APP_PORT
+- BUCKET_NAME
+- STORAGE_CREDENTIAL_FILE

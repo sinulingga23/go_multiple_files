@@ -71,7 +71,7 @@ func (h handler) uploadFiles(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	filesHeader := r.MultipartForm.File["images"]
+	filesHeader := r.MultipartForm.File["files"]
 	if len(filesHeader) == 0 {
 		w.WriteHeader(http.StatusBadRequest)
 		return

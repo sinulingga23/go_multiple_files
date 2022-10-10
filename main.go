@@ -99,6 +99,7 @@ func (h handler) uploadFiles(w http.ResponseWriter, r *http.Request) {
 
 			imageUrl, err := h.clientCLoudStorageService.uploadFile(bucket, filename, bytes)
 			if err != nil {
+				mu.Unlock()
 				log.Printf("[%s]: %s", fileHeader.Filename, err.Error())
 				return
 			}
